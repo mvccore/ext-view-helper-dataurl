@@ -11,7 +11,7 @@
  * @license		https://mvccore.github.io/docs/mvccore/5.0.0/LICENCE.md
  */
 
-namespace MvcCore\Ext\View\Helpers;
+namespace MvcCore\Ext\Views\Helpers;
 
 /**
  * Responsibility - get any file content by given relative or absolute path in data url format: `data:image/png;base64,iVBOR..`.
@@ -19,7 +19,7 @@ namespace MvcCore\Ext\View\Helpers;
  *   relative from application root or absolute path to file.
  * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
  */
-class DataUrl implements \MvcCore\Ext\View\Helpers\IHelper
+class DataUrl implements \MvcCore\Ext\Views\Helpers\IHelper
 {
 	/**
 	 * MvcCore Extension - View Helper - Assets - version:
@@ -39,11 +39,11 @@ class DataUrl implements \MvcCore\Ext\View\Helpers\IHelper
 	 * Example: `"C:/www/my/development/direcotry/www"`
 	 * @var string|NULL
 	 */
-	protected $appRoot			= NULL;
+	protected $appRoot = NULL;
 
 	/**
 	 * Create view helper instance, everytime new instance.
-	 * @return \MvcCore\Ext\View\Helpers\DataUrl
+	 * @return \MvcCore\Ext\Views\Helpers\DataUrl
 	 */
 	public static function & GetInstance () {
 		$instance = new static;
@@ -57,7 +57,7 @@ class DataUrl implements \MvcCore\Ext\View\Helpers\IHelper
 	 * - `DataUrl::$view`		as `\MvcCore\View|\MvcCore\Interfaces\IView`
 	 * - `DataUrl::$request`	as `\MvcCore\Request|\MvcCore\Interfaces\IRequest`
 	 * @param \MvcCore\View|\MvcCore\Interfaces\IView $view
-	 * @return \MvcCore\Ext\View\Helpers\DataUrl
+	 * @return \MvcCore\Ext\Views\Helpers\DataUrl
 	 */
 	public function & SetView (\MvcCore\Interfaces\IView & $view) {
 		$this->view = $view;
