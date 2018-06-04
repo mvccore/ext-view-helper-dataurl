@@ -76,7 +76,7 @@ class DataUrl implements \MvcCore\Ext\Views\Helpers\IHelper
 	 */
 	public function DataUrl ($relativeOrAbsolutePath) {
 		$currentDirFullPath = $this->view->GetCurrentViewDirectory();
-		$searchedPaths = array();
+		$searchedPaths = [];
 		// first - try to find file relatively from currently rendered view
 		array_unshift($searchedPaths, $currentDirFullPath . '/' . $relativeOrAbsolutePath);
 		if (!file_exists($searchedPaths[0])) {
