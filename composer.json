@@ -1,7 +1,7 @@
 {
 	"name": "mvccore/ext-view-helper-dataurl",
 	"type": "library",
-	"description": "MvcCore Extension - View Helper - Data URL - get any file content by given relative or absolute path in data url format: `data:image/png;base64,iVBOR..`.",
+	"description": "MvcCore - Extension - View - Helper - Data URL - get any file content by given relative or absolute path in data url format: `data:image/png;base64,iVBOR..`.",
 	"keywords": [
 		"mvc", 
 		"mvccore", 
