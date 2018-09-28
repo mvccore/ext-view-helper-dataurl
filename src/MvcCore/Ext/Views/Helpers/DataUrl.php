@@ -30,7 +30,7 @@ class DataUrl implements \MvcCore\Ext\Views\Helpers\IHelper
 
 	/**
 	 * Currently rendered view instance.
-	 * @var \MvcCore\View|\MvcCore\Interfaces\IView|NULL
+	 * @var \MvcCore\View|\MvcCore\IView|NULL
 	 */
 	protected $view = NULL;
 
@@ -54,12 +54,12 @@ class DataUrl implements \MvcCore\Ext\Views\Helpers\IHelper
 	 * Set currently rendered view instance every time this helper
 	 * is called and the rendered view instance is changed.
 	 * This method sets these protected object references:
-	 * - `DataUrl::$view`		as `\MvcCore\View|\MvcCore\Interfaces\IView`
-	 * - `DataUrl::$request`	as `\MvcCore\Request|\MvcCore\Interfaces\IRequest`
-	 * @param \MvcCore\View|\MvcCore\Interfaces\IView $view
+	 * - `DataUrl::$view`		as `\MvcCore\View|\MvcCore\IView`
+	 * - `DataUrl::$request`	as `\MvcCore\Request|\MvcCore\IRequest`
+	 * @param \MvcCore\View|\MvcCore\IView $view
 	 * @return \MvcCore\Ext\Views\Helpers\DataUrl
 	 */
-	public function & SetView (\MvcCore\Interfaces\IView & $view) {
+	public function & SetView (\MvcCore\IView & $view) {
 		$this->view = $view;
 		$this->appRoot = $view->GetController()->GetRequest()->GetAppRoot();
 		return $this;
