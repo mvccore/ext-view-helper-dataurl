@@ -19,7 +19,7 @@ namespace MvcCore\Ext\Views\Helpers;
  *   relative from application root or absolute path to file.
  * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
  */
-class DataUrl implements \MvcCore\Ext\Views\Helpers\IHelper
+class DataUrlHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 {
 	/**
 	 * MvcCore Extension - View Helper - Assets - version:
@@ -43,7 +43,7 @@ class DataUrl implements \MvcCore\Ext\Views\Helpers\IHelper
 
 	/**
 	 * Create view helper instance, everytime new instance.
-	 * @return \MvcCore\Ext\Views\Helpers\DataUrl
+	 * @return \MvcCore\Ext\Views\Helpers\DataUrlHelper
 	 */
 	public static function & GetInstance () {
 		$instance = new static;
@@ -54,10 +54,10 @@ class DataUrl implements \MvcCore\Ext\Views\Helpers\IHelper
 	 * Set currently rendered view instance every time this helper
 	 * is called and the rendered view instance is changed.
 	 * This method sets these protected object references:
-	 * - `DataUrl::$view`		as `\MvcCore\View|\MvcCore\IView`
-	 * - `DataUrl::$request`	as `\MvcCore\Request|\MvcCore\IRequest`
+	 * - `DataUrlHelper::$view`		as `\MvcCore\View|\MvcCore\IView`
+	 * - `DataUrlHelper::$request`	as `\MvcCore\Request|\MvcCore\IRequest`
 	 * @param \MvcCore\View|\MvcCore\IView $view
-	 * @return \MvcCore\Ext\Views\Helpers\DataUrl
+	 * @return \MvcCore\Ext\Views\Helpers\DataUrlHelper
 	 */
 	public function & SetView (\MvcCore\IView & $view) {
 		$this->view = $view;
