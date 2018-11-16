@@ -14,7 +14,7 @@
 namespace MvcCore\Ext\Views\Helpers;
 
 /**
- * Responsibility - get any file content by given relative or absolute path in data url format: `data:image/png;base64,iVBOR..`.
+ * Responsibility - get any file content by given relative or absolute path in data URL format: `data:image/png;base64,iVBOR..`.
  * - Path could be relative from currently rendered view,
  *   relative from application root or absolute path to file.
  * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
@@ -72,7 +72,7 @@ class DataUrlHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 	 * @param string $relativeOrAbsolutePath
 	 * @throws \InvalidArgumentException If file not found by given path in any searched place.
-	 * @return string Data url value like: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgA...`
+	 * @return string Data URL value like: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgA...`
 	 */
 	public function DataUrl ($relativeOrAbsolutePath) {
 		$currentDirFullPath = $this->view->GetCurrentViewDirectory();
