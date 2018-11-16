@@ -23,7 +23,7 @@ class DataUrlHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 {
 	/**
 	 * MvcCore Extension - View Helper - Assets - version:
-	 * Comparation by PHP function version_compare();
+	 * Comparison by PHP function version_compare();
 	 * @see http://php.net/manual/en/function.version-compare.php
 	 */
 	const VERSION = '5.0.0-alpha';
@@ -42,7 +42,7 @@ class DataUrlHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 	protected $appRoot = NULL;
 
 	/**
-	 * Create view helper instance, everytime new instance.
+	 * Create view helper instance, every time new instance.
 	 * @return \MvcCore\Ext\Views\Helpers\DataUrlHelper
 	 */
 	public static function & GetInstance () {
