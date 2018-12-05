@@ -87,8 +87,9 @@ class DataUrlHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 				array_unshift($searchedPaths, $relativeOrAbsolutePath);
 				if (!file_exists($searchedPaths[0])) {
 					// throw an error at last
+					$selfClass = version_compare(PHP_VERSION, '5.5', '>') ? self::class : __CLASS__;
 					throw new \InvalidArgumentException(
-						"[".__CLASS__."] File not found in paths: '" . implode("', '", array_reverse($searchedPaths)) . "'."
+						"[".$selfClass."] File not found in paths: '" . implode("', '", array_reverse($searchedPaths)) . "'."
 					);
 				}
 			}
