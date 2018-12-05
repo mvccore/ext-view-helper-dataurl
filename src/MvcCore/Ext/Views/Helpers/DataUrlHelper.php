@@ -36,7 +36,7 @@ class DataUrlHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 
 	/**
 	 * Application root path on hard drive.
-	 * Example: `"C:/www/my/development/direcotry/www"`
+	 * Example: `"C:/www/my/development/directory/www"`
 	 * @var string|NULL
 	 */
 	protected $appRoot = NULL;
