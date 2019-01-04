@@ -18,6 +18,7 @@ namespace MvcCore\Ext\Views\Helpers;
  * - Path could be relative from currently rendered view,
  *   relative from application root or absolute path to file.
  * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+ * @method \MvcCore\Ext\Views\Helpers\DataUrlHelper GetInstance()
  */
 class DataUrlHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 {
@@ -43,6 +44,7 @@ class DataUrlHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 
 	/**
 	 * Create view helper instance, every time new instance.
+	 * @static
 	 * @return \MvcCore\Ext\Views\Helpers\DataUrlHelper
 	 */
 	public static function & GetInstance () {
