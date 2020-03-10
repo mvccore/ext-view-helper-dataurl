@@ -61,7 +61,7 @@ class DataUrlHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 	 * @param \MvcCore\View|\MvcCore\IView $view
 	 * @return \MvcCore\Ext\Views\Helpers\DataUrlHelper
 	 */
-	public function & SetView (\MvcCore\IView & $view) {
+	public function SetView (\MvcCore\IView $view) {
 		$this->view = $view;
 		$this->appRoot = $view->GetController()->GetRequest()->GetAppRoot();
 		return $this;
@@ -87,13 +87,11 @@ class DataUrlHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 			if (!file_exists($searchedPaths[0])) {
 				// third - try to find file absolutely
 				array_unshift($searchedPaths, $relativeOrAbsolutePath);
-				if (!file_exists($searchedPaths[0])) {
+				if (!file_exists($searchedPaths[0])) 
 					// throw an error at last
-					$selfClass = version_compare(PHP_VERSION, '5.5', '>') ? self::class : __CLASS__;
 					throw new \InvalidArgumentException(
-						"[".$selfClass."] File not found in paths: '" . implode("', '", array_reverse($searchedPaths)) . "'."
+						"[".get_class()."] File not found in paths: '".implode("', '", array_reverse($searchedPaths))."'."
 					);
-				}
 			}
 		}
 		// get last searched path
