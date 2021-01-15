@@ -7,7 +7,7 @@
  * For the full copyright and license information, please view
  * the LICENSE.md file that are distributed with this source code.
  *
- * @copyright	Copyright (c) 2016 Tom Flídr (https://github.com/mvccore/mvccore)
+ * @copyright	Copyright (c) 2016 Tom Flidr (https://github.com/mvccore)
  * @license		https://mvccore.github.io/docs/mvccore/5.0.0/LICENCE.md
  */
 
@@ -20,18 +20,18 @@ namespace MvcCore\Ext\Views\Helpers;
  * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
  * @method \MvcCore\Ext\Views\Helpers\DataUrlHelper GetInstance()
  */
-class DataUrlHelper implements \MvcCore\Ext\Views\Helpers\IHelper
-{
+class DataUrlHelper implements \MvcCore\Ext\Views\Helpers\IHelper {
+
 	/**
 	 * MvcCore Extension - View Helper - Assets - version:
 	 * Comparison by PHP function version_compare();
 	 * @see http://php.net/manual/en/function.version-compare.php
 	 */
-	const VERSION = '5.0.0-alpha';
+	const VERSION = '5.0.0';
 
 	/**
 	 * Currently rendered view instance.
-	 * @var \MvcCore\View|\MvcCore\IView|NULL
+	 * @var \MvcCore\View|NULL
 	 */
 	protected $view = NULL;
 
@@ -58,7 +58,7 @@ class DataUrlHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 	 * This method sets these protected object references:
 	 * - `DataUrlHelper::$view`		as `\MvcCore\View|\MvcCore\IView`
 	 * - `DataUrlHelper::$request`	as `\MvcCore\Request|\MvcCore\IRequest`
-	 * @param \MvcCore\View|\MvcCore\IView $view
+	 * @param \MvcCore\View $view
 	 * @return \MvcCore\Ext\Views\Helpers\DataUrlHelper
 	 */
 	public function SetView (\MvcCore\IView $view) {
