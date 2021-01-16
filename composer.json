@@ -3,20 +3,20 @@
 	"type": "library",
 	"description": "MvcCore - Extension - View - Helper - Data URL - get any file content by given relative or absolute path in data url format: `data:image/png;base64,iVBOR..`.",
 	"keywords": [
-		"mvc", 
-		"mvccore", 
-		"framework", 
-		"extension", 
-		"plugin", 
-		"plug-in", 
-		"ext", 
-		"view", 
-		"helper", 
-		"viewhelper", 
-		"data", 
-		"url", 
-		"dataurl", 
-		"base64", 
+		"mvc",
+		"mvccore",
+		"framework",
+		"extension",
+		"plugin",
+		"plug-in",
+		"ext",
+		"view",
+		"helper",
+		"viewhelper",
+		"data",
+		"url",
+		"dataurl",
+		"base64",
 		"encoded"
 	],
 	"license": ["BSD-3-Clause"],
@@ -26,11 +26,13 @@
 	}],
 	"require": {
 		"php": ">=5.4.0",
-		"mvccore/mvccore": "dev-master",
-		"mvccore/ext-view-helper": "dev-master"
+		"mvccore/mvccore": "^5.0",
+		"mvccore/ext-view-helper": "^5.0"
 	},
 	"autoload": {
-		"classmap": ["src/"]
+		"classmap": [
+			"src/"
+		]
 	},
 	"minimum-stability": "dev"
 }
