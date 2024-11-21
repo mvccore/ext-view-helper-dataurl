@@ -63,7 +63,7 @@ class DataUrlHelper implements \MvcCore\Ext\Views\Helpers\IHelper {
 	 */
 	public function SetView (\MvcCore\IView $view) {
 		$this->view = $view;
-		$this->appRoot = $view->GetController()->GetRequest()->GetAppRoot();
+		$this->appRoot = $view->GetController()->GetApplication()->GetPathAppRoot();
 		return $this;
 	}
 
